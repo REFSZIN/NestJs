@@ -4,8 +4,7 @@ import { CreateUserDTO } from 'src/dtos/create-user.dto';
 
 @Controller('users')
 export class UsersController {
-
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService) {}
 
   @Get()
   getUsers() {
@@ -16,5 +15,4 @@ export class UsersController {
   createUser(@Body() body: CreateUserDTO) {
     return this.usersService.createUser(body);
   }
-
 }

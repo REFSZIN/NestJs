@@ -4,8 +4,7 @@ import { CreateUserDTO } from 'src/dtos/create-user.dto';
 
 @Injectable()
 export class UsersService {
-
-  constructor(private usersRepository: UsersRepository) { }
+  constructor(private usersRepository: UsersRepository) {}
 
   getUsers() {
     return this.usersRepository.getUsers();
@@ -14,5 +13,4 @@ export class UsersService {
   createUser(user: CreateUserDTO) {
     return this.usersRepository.createUser(user);
   }
-
 }
